@@ -12,12 +12,23 @@ export default function LandingPage() {
           <h1>Welcome to BizNest</h1>
           <p>Your one-stop digital platform for local stores, smart billing, and seamless payments.</p>
           <div className="cta-buttons">
-            <Link to="/signup" className="btn-primary">Get Started</Link>
-            <Link to="/services" className="btn-secondary">Learn More</Link>
+            {/* Two separate buttons for Customer and Shopkeeper */}
+            <Link to="/login?role=customer" className="btn-primary">
+              I’m a Customer
+            </Link>
+            <Link to="/login?role=shopkeeper" className="btn-secondary">
+              I’m a Shopkeeper
+            </Link>
+            <Link to="/services" className="btn-tertiary">
+              Learn More
+            </Link>
           </div>
         </div>
         <div className="hero-image">
-          <img src="https://images.unsplash.com/photo-1556742400-b5d3f0ddf0c6" alt="Local Business" />
+          <img 
+            src="https://images.unsplash.com/photo-1556742400-b5d3f0ddf0c6" 
+            alt="Local Business" 
+          />
         </div>
       </section>
 
@@ -26,7 +37,7 @@ export default function LandingPage() {
         <h2>Why Choose BizNest?</h2>
         <div className="feature-grid">
           <div className="feature-card">
-            <img src="https://img.icons8.com/fluency/96/shopping-cart.png" alt="One App" />{/* this img.icons8.com gives the source for all icon images */}
+            <img src="https://img.icons8.com/fluency/96/shopping-cart.png" alt="One App" />
             <h3>One App for All</h3>
             <p>Shop groceries, medicines, and hardware from nearby stores in one place.</p>
           </div>
@@ -47,7 +58,14 @@ export default function LandingPage() {
       <section className="cta-section">
         <h2>Join the Future of Local Commerce</h2>
         <p>Digitalize your store or shop smarter as a customer — all with BizNest.</p>
-        <Link to="/signup" className="btn-primary">Sign Up Now</Link>
+        <div className="cta-buttons">
+          <Link to="/signup?role=customer" className="btn-primary">
+            Sign Up as Customer
+          </Link>
+          <Link to="/signup?role=shopkeeper" className="btn-secondary">
+            Sign Up as Shopkeeper
+          </Link>
+        </div>
       </section>
     </div>
   );

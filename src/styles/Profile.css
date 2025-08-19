@@ -1,0 +1,82 @@
+.profile-container {
+  max-width: 750px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #232f3e;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-form label {
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+.profile-form input,
+.profile-form select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.profile-form input:disabled,
+.profile-form select:disabled {
+  background: #f0f0f0;
+  cursor: not-allowed;
+}
+
+.profile-form h3 {
+  margin-top: 20px;
+  color: #ff9900;
+}
+
+.address-block {
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.profile-actions button {
+  padding: 10px 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile-actions button:first-child {
+  background: #ff9900;
+  color: black;
+}
+
+.profile-actions button:first-child:hover {
+  background: #e68a00;
+}
+
+.profile-actions button:last-child {
+  background: #ccc;
+}
+
+.profile-actions button:last-child:hover {
+  background: #aaa;
+}

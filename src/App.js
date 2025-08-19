@@ -1,46 +1,39 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Import Pages
+// Pages
 import LandingPage from "./pages/LandingPage";
-// import ServicesPage from "./pages/ServicesPage";
-// import LoginPage from "./pages/LoginPage";
-// import SignupPage from "./pages/SignupPage";
-// import CustomerDashboard from "./pages/customer/CustomerDashboard";
-// import ProviderDashboard from "./pages/provider/ProviderDashboard";
-// import AdminDashboard from "./pages/admin/AdminDashboard";
-// import NotFound from "./pages/NotFound";
-
-// Import Components
-// import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
+import Login from "./components/Login";
+import Logout from "./components/Logout";
+import PostLogin from "./pages/PostLogin";
+import CustomerDashboard from "./pages/customer/CustomerDashboard";
+import ShopkeeperDashboard from "./pages/shopkeeper/ShopkeeperDashboard";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
     <Router>
-      {/* <Navbar /> */}
       <main style={{ minHeight: "80vh" }}>
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<LandingPage />} />
-          {/* <Route path="/services" element={<ServicesPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} /> */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
 
-          {/* Customer */}
-          {/* <Route path="/customer/dashboard" element={<CustomerDashboard />} /> */}
+          {/* Post Login */}
+          <Route path="/post-login" element={<PostLogin />} />
 
-          {/* Provider */}
-          {/* <Route path="/provider/dashboard" element={<ProviderDashboard />} /> */}
+          {/* Dashboards */}
+          <Route path="/customer-dashboard" element={<CustomerDashboard />} />
+          <Route
+            path="/shopkeeper-dashboard"
+            element={<ShopkeeperDashboard />}
+          />
 
-          {/* Admin */}
-          {/* <Route path="/admin/dashboard" element={<AdminDashboard />} /> */}
-
-          {/* 404 */}
-          {/* <Route path="*" element={<NotFound />} /> */}
+          {/* Profile Page */}
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </main>
-      {/* <Footer /> */}
     </Router>
   );
 }
